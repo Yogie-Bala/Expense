@@ -33,7 +33,7 @@ const Login = () => {
 
   const handleLogin = async (name, password) => {
     try {
-      const response = await API.post('http://localhost:8000/auth/logIn', {
+      const response = await API.post('auth/logIn', {
         name,
         password
       });
