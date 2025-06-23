@@ -9,9 +9,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: "https://expensefrontend-green.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"]
+    origin: ["https://expensefrontend-green.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Include OPTIONS
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true
 }));
 app.use(express.json());
 
