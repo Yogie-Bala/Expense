@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:8000', // Use env variable in production
+  baseURL: 'https://expenseback-eight.vercel.app/', // Use env variable in production
   headers: {
     'Content-Type': 'application/json',
   },
