@@ -9,15 +9,18 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: ["https://expensefrontend-green.vercel.app"],
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Include OPTIONS
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true
+  origin: process.env.CLIENT_URL || '*',
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 app.use(express.json());
 
 // DB Connection
 connectDB();
+
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 
 // Routes
 const authRoutes = require('./routes/authRoutes');
