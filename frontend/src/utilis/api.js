@@ -2,7 +2,11 @@
 import axios from 'axios';
 
 const API = axios.create({
+<<<<<<< HEAD
   baseURL: REACT_APP_BACKEND_URL, // Use env variable in production
+=======
+  baseURL: 'https://expensebackend-t8h5.onrender.com', // Use env variable in production
+>>>>>>> 86a4a57e5441e0d4cc5a64253b780b45380aef1c
   headers: {
     'Content-Type': 'application/json',
   },
