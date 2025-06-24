@@ -1,8 +1,7 @@
-// utils/api.js or utils/axiosInstance.js
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: REACT_APP_BACKEND_URL, // Use env variable in production
+  baseURL: process.env.REACT_APP_BACKEND_URL, // ✅ Fixed here
   headers: {
     'Content-Type': 'application/json',
   },
